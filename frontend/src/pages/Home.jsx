@@ -50,7 +50,7 @@ const Home = () => {
               { icon: Award, value: '500+', label: 'Imóveis Fotografados' },
               { icon: TrendingUp, value: '95%', label: 'Taxa de Satisfação' },
               { icon: Clock, value: '48h', label: 'Entrega Média' },
-              { icon: Star, value: '5.0', label: 'Avaliação Média' }
+              { icon: CheckCircle2, value: '5.0', label: 'Avaliação Média' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <stat.icon className="w-12 h-12 mx-auto mb-4 text-[#38030a]" />
