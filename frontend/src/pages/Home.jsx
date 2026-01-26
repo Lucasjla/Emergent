@@ -146,7 +146,7 @@ const Home = () => {
               <Card key={depoimento.id} className="p-8">
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-[#000000] text-[#000000]" />
+                    <Star key={i} className="w-5 h-5 fill-[#38030a] text-[#38030a]" />
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 italic">"{depoimento.texto}"</p>
