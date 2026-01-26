@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
 import { Input } from '../components/ui/input';
@@ -8,12 +9,18 @@ import { Textarea } from '../components/ui/textarea';
 import { Checkbox } from '../components/ui/checkbox';
 import { Calendar } from '../components/ui/calendar';
 import { Camera, Video, Plane, ScanEye, Layout, User, ChevronRight, ChevronLeft, Check } from 'lucide-react';
-import { servicos, pacotes, saveMockAgendamento } from '../mock/data';
+import { servicos, pacotes } from '../mock/data';
 import { toast } from 'sonner';
+import axios from 'axios';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const NovoAgendamento = () => {
   const navigate = useNavigate();
+  const { isAuthenticated, user, loading: authLoading } = useAuth();
   const [etapaAtual, setEtapaAtual] = useState(1);
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     // Etapa 1: Serviços
     pacoteSelecionado: '',
@@ -33,15 +40,26 @@ const NovoAgendamento = () => {
     horarioDesejado: '',
     
     // Etapa 4: Contato e Detalhes
-    nomeCorretor: '',
-    telefone: '',
-    email: '',
+    nomeCorretor: user?.nome || '',
+    telefone: user?.telefone || '',
+    email: user?.email || '',
     nomeProprietario: '',
     telefoneProprietario: '',
     localChaves: '',
     autorizacaoEntrada: '',
     observacoes: ''
   });
+
+  useEffect(() => {
+    if (user) {
+      setFormData(prev => ({
+        ...prev,
+        nomeCorretor: user.nome,
+        telefone: user.telefone,
+        email: user.email
+      }));
+    }
+  }, [user]);
 
   const etapas = [
     { numero: 1, titulo: 'Serviços' },
