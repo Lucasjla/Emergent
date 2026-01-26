@@ -21,7 +21,7 @@ const Home = () => {
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Fotografia que <br />
-            <span className="text-[#000000]">Valoriza Seu Imóvel</span>
+            <span className="text-white">Valoriza Seu Imóvel</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto">
             Transforme propriedades em obras de arte visual. Fotografia, vídeo e drone profissionais para o mercado imobiliário.
