@@ -130,12 +130,50 @@ const NovoAgendamento = () => {
     }
   };
 
-  const finalizarAgendamento = () => {
-    const agendamento = saveMockAgendamento(formData);
-    toast.success('Agendamento realizado com sucesso!');
-    setTimeout(() => {
-      navigate('/');
-    }, 2000);
+  const finalizarAgendamento = async () => {
+    if (!isAuthenticated) {
+      toast.error('Você precisa estar logado para fazer um agendamento');
+      navigate('/login');
+      return;
+    }
+
+    setLoading(true);
+    
+    try {
+      const pedidoData = {
+        pacote_selecionado: formData.pacoteSelecionado,
+        servicos_adicionais: formData.servicosAdicionais,
+        tipo_imovel: formData.tipoImovel,
+        endereco: formData.endereco,
+        complemento: formData.complemento,
+        cidade: formData.cidade,
+        estado: formData.estado,
+        cep: formData.cep,
+        detalhes_imovel: formData.detalhesImovel,
+        data_desejada: formData.dataDesejada.toISOString(),
+        horario_desejado: formData.horarioDesejado,
+        nome_corretor: formData.nomeCorretor,
+        telefone: formData.telefone,
+        email: formData.email,
+        nome_proprietario: formData.nomeProprietario,
+        telefone_proprietario: formData.telefoneProprietario,
+        local_chaves: formData.localChaves,
+        autorizacao_entrada: formData.autorizacaoEntrada,
+        observacoes: formData.observacoes
+      };
+
+      await axios.post(`${API}/pedidos`, pedidoData);
+      
+      toast.success('Agendamento realizado com sucesso!');
+      setTimeout(() => {
+        navigate('/area-cliente');
+      }, 1500);
+    } catch (error) {
+      console.error('Error creating pedido:', error);
+      toast.error(error.response?.data?.detail || 'Erro ao criar agendamento');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const renderEtapa1 = () => (
