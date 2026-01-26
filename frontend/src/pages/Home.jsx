@@ -133,38 +133,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1a0005] mb-4">
-              O Que Dizem Nossos Clientes
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {depoimentos.map((depoimento) => (
-              <Card key={depoimento.id} className="p-8">
-                <div className="flex items-center space-x-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-[#38030a] text-[#38030a]" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-6 italic">"{depoimento.texto}"</p>
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-[#38030a] rounded-full flex items-center justify-center text-white font-bold">
-                    {depoimento.avatar}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-[#1a0005]">{depoimento.nome}</div>
-                    <div className="text-sm text-gray-500">{depoimento.cargo}</div>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Final CTA */}
       <section className="py-24 bg-gradient-to-br from-[#38030a] via-[#38001d] to-[#1a0005] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
