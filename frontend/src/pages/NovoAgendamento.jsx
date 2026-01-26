@@ -123,7 +123,7 @@ const NovoAgendamento = () => {
   const renderEtapa1 = () => (
     <div className="space-y-8">
       <div>
-        <h3 className="text-2xl font-bold text-[#2D0A0F] mb-6">Escolha seu Pacote</h3>
+        <h3 className="text-2xl font-bold text-[#1a0005] mb-6">Escolha seu Pacote</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {pacotes.map((pacote) => (
             <Card
@@ -131,22 +131,22 @@ const NovoAgendamento = () => {
               onClick={() => setFormData({ ...formData, pacoteSelecionado: pacote.id })}
               className={`p-6 cursor-pointer transition-all duration-300 ${
                 formData.pacoteSelecionado === pacote.id
-                  ? 'border-2 border-[#800020] bg-[#F5E6E8]'
-                  : 'border-2 border-gray-200 hover:border-[#800020]'
+                  ? 'border-2 border-[#38030a] bg-[#F5E6E8]'
+                  : 'border-2 border-gray-200 hover:border-[#38030a]'
               } ${pacote.destaque ? 'ring-2 ring-[#D4AF37]' : ''}`}
             >
               {pacote.destaque && (
-                <div className="bg-[#D4AF37] text-[#2D0A0F] text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">
+                <div className="bg-[#D4AF37] text-[#1a0005] text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">
                   MAIS POPULAR
                 </div>
               )}
-              <h4 className="text-xl font-bold text-[#2D0A0F] mb-2">{pacote.nome}</h4>
-              <div className="text-3xl font-bold text-[#800020] mb-3">{pacote.preco}</div>
+              <h4 className="text-xl font-bold text-[#1a0005] mb-2">{pacote.nome}</h4>
+              <div className="text-3xl font-bold text-[#38030a] mb-3">{pacote.preco}</div>
               <p className="text-sm text-gray-600 mb-4">{pacote.descricao}</p>
               <ul className="space-y-2">
                 {pacote.recursos.map((recurso, idx) => (
                   <li key={idx} className="flex items-start space-x-2 text-sm">
-                    <Check className="w-4 h-4 text-[#800020] flex-shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-[#38030a] flex-shrink-0 mt-0.5" />
                     <span>{recurso}</span>
                   </li>
                 ))}
@@ -157,7 +157,7 @@ const NovoAgendamento = () => {
       </div>
 
       <div>
-        <h3 className="text-2xl font-bold text-[#2D0A0F] mb-6">Serviços Adicionais (Opcional)</h3>
+        <h3 className="text-2xl font-bold text-[#1a0005] mb-6">Serviços Adicionais (Opcional)</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {servicos.map((servico) => {
             const IconComponent = iconMap[servico.icone];
@@ -166,8 +166,8 @@ const NovoAgendamento = () => {
                 key={servico.id}
                 className={`p-4 cursor-pointer transition-all duration-300 ${
                   formData.servicosAdicionais.includes(servico.id)
-                    ? 'border-2 border-[#800020] bg-[#F5E6E8]'
-                    : 'border border-gray-200 hover:border-[#800020]'
+                    ? 'border-2 border-[#38030a] bg-[#F5E6E8]'
+                    : 'border border-gray-200 hover:border-[#38030a]'
                 }`}
                 onClick={() => handleServicoAdicionalToggle(servico.id)}
               >
@@ -178,8 +178,8 @@ const NovoAgendamento = () => {
                   />
                   <div className="flex-1">
                     <div className="flex items-center space-x-2 mb-2">
-                      <IconComponent className="w-5 h-5 text-[#800020]" />
-                      <h4 className="font-semibold text-[#2D0A0F]">{servico.nome}</h4>
+                      <IconComponent className="w-5 h-5 text-[#38030a]" />
+                      <h4 className="font-semibold text-[#1a0005]">{servico.nome}</h4>
                     </div>
                     <p className="text-sm text-gray-600">{servico.descricao}</p>
                   </div>
@@ -194,14 +194,14 @@ const NovoAgendamento = () => {
 
   const renderEtapa2 = () => (
     <div className="space-y-6">
-      <h3 className="text-2xl font-bold text-[#2D0A0F] mb-6">Informações do Imóvel</h3>
+      <h3 className="text-2xl font-bold text-[#1a0005] mb-6">Informações do Imóvel</h3>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <Label htmlFor="tipoImovel">Tipo de Imóvel *</Label>
           <select
             id="tipoImovel"
-            className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#800020] focus:border-transparent"
+            className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#38030a] focus:border-transparent"
             value={formData.tipoImovel}
             onChange={(e) => setFormData({ ...formData, tipoImovel: e.target.value })}
           >
@@ -248,7 +248,7 @@ const NovoAgendamento = () => {
           <Label htmlFor="estado">Estado *</Label>
           <select
             id="estado"
-            className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#800020] focus:border-transparent"
+            className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#38030a] focus:border-transparent"
             value={formData.estado}
             onChange={(e) => setFormData({ ...formData, estado: e.target.value })}
           >
@@ -286,7 +286,7 @@ const NovoAgendamento = () => {
 
   const renderEtapa3 = () => (
     <div className="space-y-6">
-      <h3 className="text-2xl font-bold text-[#2D0A0F] mb-6">Selecione Data e Horário</h3>
+      <h3 className="text-2xl font-bold text-[#1a0005] mb-6">Selecione Data e Horário</h3>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div>
@@ -304,7 +304,7 @@ const NovoAgendamento = () => {
           <Label htmlFor="horario">Horário Preferencial *</Label>
           <select
             id="horario"
-            className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#800020] focus:border-transparent"
+            className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#38030a] focus:border-transparent"
             value={formData.horarioDesejado}
             onChange={(e) => setFormData({ ...formData, horarioDesejado: e.target.value })}
           >
@@ -331,7 +331,7 @@ const NovoAgendamento = () => {
 
   const renderEtapa4 = () => (
     <div className="space-y-6">
-      <h3 className="text-2xl font-bold text-[#2D0A0F] mb-6">Dados de Contato</h3>
+      <h3 className="text-2xl font-bold text-[#1a0005] mb-6">Dados de Contato</h3>
       
       <div className="bg-gray-50 p-6 rounded-lg">
         <h4 className="font-semibold text-lg mb-4">Seus Dados (Corretor)</h4>
@@ -430,14 +430,14 @@ const NovoAgendamento = () => {
 
     return (
       <div className="space-y-6">
-        <h3 className="text-2xl font-bold text-[#2D0A0F] mb-6">Confirmação do Pedido</h3>
+        <h3 className="text-2xl font-bold text-[#1a0005] mb-6">Confirmação do Pedido</h3>
         
         <Card className="p-6 bg-gradient-to-br from-[#F5E6E8] to-white">
-          <h4 className="font-bold text-lg mb-4 text-[#800020]">Serviços Selecionados</h4>
+          <h4 className="font-bold text-lg mb-4 text-[#38030a]">Serviços Selecionados</h4>
           <div className="space-y-3">
             <div className="flex justify-between items-center">
               <span className="font-semibold">Pacote:</span>
-              <span className="text-[#800020] font-bold">{pacote?.nome} - {pacote?.preco}</span>
+              <span className="text-[#38030a] font-bold">{pacote?.nome} - {pacote?.preco}</span>
             </div>
             {servicosAdicionaisSelecionados.length > 0 && (
               <div>
@@ -453,7 +453,7 @@ const NovoAgendamento = () => {
         </Card>
 
         <Card className="p-6">
-          <h4 className="font-bold text-lg mb-4 text-[#800020]">Informações do Imóvel</h4>
+          <h4 className="font-bold text-lg mb-4 text-[#38030a]">Informações do Imóvel</h4>
           <div className="space-y-2 text-sm">
             <p><strong>Tipo:</strong> {formData.tipoImovel}</p>
             <p><strong>Endereço:</strong> {formData.endereco}, {formData.complemento}</p>
@@ -462,7 +462,7 @@ const NovoAgendamento = () => {
         </Card>
 
         <Card className="p-6">
-          <h4 className="font-bold text-lg mb-4 text-[#800020]">Data e Horário</h4>
+          <h4 className="font-bold text-lg mb-4 text-[#38030a]">Data e Horário</h4>
           <div className="space-y-2 text-sm">
             <p><strong>Data:</strong> {formData.dataDesejada?.toLocaleDateString('pt-BR')}</p>
             <p><strong>Horário:</strong> {formData.horarioDesejado}</p>
@@ -470,7 +470,7 @@ const NovoAgendamento = () => {
         </Card>
 
         <Card className="p-6">
-          <h4 className="font-bold text-lg mb-4 text-[#800020]">Contato</h4>
+          <h4 className="font-bold text-lg mb-4 text-[#38030a]">Contato</h4>
           <div className="space-y-2 text-sm">
             <p><strong>Corretor:</strong> {formData.nomeCorretor}</p>
             <p><strong>Telefone:</strong> {formData.telefone}</p>
@@ -498,7 +498,7 @@ const NovoAgendamento = () => {
                 <div
                   className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-all ${
                     etapaAtual >= etapa.numero
-                      ? 'bg-[#800020] text-white'
+                      ? 'bg-[#38030a] text-white'
                       : 'bg-gray-300 text-gray-600'
                   }`}
                 >
@@ -510,7 +510,7 @@ const NovoAgendamento = () => {
           </div>
           <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
             <div
-              className="h-full bg-[#800020] transition-all duration-300"
+              className="h-full bg-[#38030a] transition-all duration-300"
               style={{ width: `${(etapaAtual / 5) * 100}%` }}
             />
           </div>
@@ -531,7 +531,7 @@ const NovoAgendamento = () => {
             variant="outline"
             onClick={etapaAnterior}
             disabled={etapaAtual === 1}
-            className="border-[#800020] text-[#800020] hover:bg-[#800020] hover:text-white"
+            className="border-[#38030a] text-[#38030a] hover:bg-[#38030a] hover:text-white"
           >
             <ChevronLeft className="w-4 h-4 mr-2" />
             Voltar
@@ -540,7 +540,7 @@ const NovoAgendamento = () => {
           {etapaAtual < 5 ? (
             <Button
               onClick={proximaEtapa}
-              className="bg-[#800020] hover:bg-[#6B0F1A] text-white"
+              className="bg-[#38030a] hover:bg-[#38001d] text-white"
             >
               Próxima Etapa
               <ChevronRight className="w-4 h-4 ml-2" />
@@ -548,7 +548,7 @@ const NovoAgendamento = () => {
           ) : (
             <Button
               onClick={finalizarAgendamento}
-              className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#2D0A0F] font-semibold"
+              className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#1a0005] font-semibold"
             >
               Confirmar Agendamento
               <Check className="w-4 h-4 ml-2" />

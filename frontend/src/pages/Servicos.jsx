@@ -27,7 +27,7 @@ const Servicos = () => {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-[#800020] via-[#6B0F1A] to-[#2D0A0F] text-white">
+      <section className="relative py-32 bg-gradient-to-br from-[#38030a] via-[#38001d] to-[#1a0005] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Nossos Serviços
@@ -59,21 +59,21 @@ const Servicos = () => {
                         alt={servico.nome}
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#800020]/50 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#38030a]/50 to-transparent" />
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="flex-1">
-                    <div className="w-16 h-16 bg-gradient-to-br from-[#800020] to-[#6B0F1A] rounded-2xl flex items-center justify-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#38030a] to-[#38001d] rounded-2xl flex items-center justify-center mb-6">
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-3xl font-bold text-[#2D0A0F] mb-4">{servico.nome}</h3>
+                    <h3 className="text-3xl font-bold text-[#1a0005] mb-4">{servico.nome}</h3>
                     <p className="text-lg text-gray-600 mb-6">{servico.descricao}</p>
                     <ul className="space-y-3">
                       {servico.detalhes.map((detalhe, idx) => (
                         <li key={idx} className="flex items-start space-x-3">
-                          <CheckCircle2 className="w-6 h-6 text-[#800020] flex-shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-6 h-6 text-[#38030a] flex-shrink-0 mt-0.5" />
                           <span className="text-gray-700">{detalhe}</span>
                         </li>
                       ))}
@@ -89,14 +89,14 @@ const Servicos = () => {
       {/* CTA */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-[#2D0A0F] mb-6">
+          <h2 className="text-4xl font-bold text-[#1a0005] mb-6">
             Pronto para começar?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
             Escolha o pacote ideal e agende seu ensaio fotográfico agora mesmo
           </p>
           <Link to="/novo-agendamento">
-            <Button size="lg" className="bg-[#800020] hover:bg-[#6B0F1A] text-white text-lg px-10 py-6">
+            <Button size="lg" className="bg-[#38030a] hover:bg-[#38001d] text-white text-lg px-10 py-6">
               Agendar Agora
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

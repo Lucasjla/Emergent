@@ -25,7 +25,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="text-3xl font-bold">
-              <span className="text-[#800020]">ARKANO</span>
+              <span className="text-[#38030a]">ARKANO</span>
             </div>
           </Link>
 
@@ -35,8 +35,8 @@ const Header = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`text-sm font-medium transition-colors hover:text-[#800020] ${
-                  isActive(link.to) ? 'text-[#800020]' : 'text-gray-700'
+                className={`text-sm font-medium transition-colors hover:text-[#38030a] ${
+                  isActive(link.to) ? 'text-[#38030a]' : 'text-gray-700'
                 }`}
               >
                 {link.label}
@@ -47,7 +47,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/novo-agendamento">
-              <Button className="bg-[#800020] hover:bg-[#6B0F1A] text-white">
+              <Button className="bg-[#38030a] hover:bg-[#38001d] text-white">
                 <Calendar className="w-4 h-4 mr-2" />
                 Agendar Ensaio
               </Button>
@@ -74,14 +74,14 @@ const Header = () => {
                 to={link.to}
                 onClick={() => setIsMenuOpen(false)}
                 className={`block py-2 text-sm font-medium transition-colors ${
-                  isActive(link.to) ? 'text-[#800020]' : 'text-gray-700'
+                  isActive(link.to) ? 'text-[#38030a]' : 'text-gray-700'
                 }`}
               >
                 {link.label}
               </Link>
             ))}
             <Link to="/novo-agendamento" onClick={() => setIsMenuOpen(false)}>
-              <Button className="w-full bg-[#800020] hover:bg-[#6B0F1A] text-white">
+              <Button className="w-full bg-[#38030a] hover:bg-[#38001d] text-white">
                 <Calendar className="w-4 h-4 mr-2" />
                 Agendar Ensaio
               </Button>

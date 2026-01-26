@@ -30,7 +30,7 @@ const Contato = () => {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-[#800020] via-[#6B0F1A] to-[#2D0A0F] text-white">
+      <section className="relative py-32 bg-gradient-to-br from-[#38030a] via-[#38001d] to-[#1a0005] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Entre em Contato
@@ -48,7 +48,7 @@ const Contato = () => {
             {/* Contact Info */}
             <div className="lg:col-span-1 space-y-8">
               <div>
-                <h2 className="text-3xl font-bold text-[#2D0A0F] mb-6">
+                <h2 className="text-3xl font-bold text-[#1a0005] mb-6">
                   Informações de Contato
                 </h2>
                 <p className="text-gray-600 mb-8">
@@ -59,11 +59,11 @@ const Contato = () => {
               <div className="space-y-6">
                 <Card className="p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#800020] to-[#6B0F1A] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#38030a] to-[#38001d] rounded-lg flex items-center justify-center flex-shrink-0">
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-[#2D0A0F] mb-1">Telefone</h4>
+                      <h4 className="font-semibold text-[#1a0005] mb-1">Telefone</h4>
                       <p className="text-gray-600">(11) 99999-9999</p>
                       <p className="text-sm text-gray-500 mt-1">Seg - Sex: 8h às 18h</p>
                     </div>
@@ -72,11 +72,11 @@ const Contato = () => {
 
                 <Card className="p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#800020] to-[#6B0F1A] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#38030a] to-[#38001d] rounded-lg flex items-center justify-center flex-shrink-0">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-[#2D0A0F] mb-1">E-mail</h4>
+                      <h4 className="font-semibold text-[#1a0005] mb-1">E-mail</h4>
                       <p className="text-gray-600">contato@arkano.com.br</p>
                       <p className="text-sm text-gray-500 mt-1">Resposta em até 24h</p>
                     </div>
@@ -85,11 +85,11 @@ const Contato = () => {
 
                 <Card className="p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#800020] to-[#6B0F1A] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#38030a] to-[#38001d] rounded-lg flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-[#2D0A0F] mb-1">Localização</h4>
+                      <h4 className="font-semibold text-[#1a0005] mb-1">Localização</h4>
                       <p className="text-gray-600">São Paulo, SP</p>
                       <p className="text-sm text-gray-500 mt-1">Atendemos toda a Grande SP</p>
                     </div>
@@ -101,7 +101,7 @@ const Contato = () => {
             {/* Form */}
             <div className="lg:col-span-2">
               <Card className="p-8">
-                <h2 className="text-3xl font-bold text-[#2D0A0F] mb-6">
+                <h2 className="text-3xl font-bold text-[#1a0005] mb-6">
                   Envie sua Mensagem
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -142,7 +142,7 @@ const Contato = () => {
                       <Label htmlFor="assunto">Assunto *</Label>
                       <select
                         id="assunto"
-                        className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#800020] focus:border-transparent"
+                        className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#38030a] focus:border-transparent"
                         value={formData.assunto}
                         onChange={(e) => setFormData({ ...formData, assunto: e.target.value })}
                         required
@@ -170,7 +170,7 @@ const Contato = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-[#800020] hover:bg-[#6B0F1A] text-white"
+                    className="w-full bg-[#38030a] hover:bg-[#38001d] text-white"
                   >
                     Enviar Mensagem
                     <Send className="ml-2 w-5 h-5" />

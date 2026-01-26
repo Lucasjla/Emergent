@@ -9,7 +9,7 @@ const Planos = () => {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-[#800020] via-[#6B0F1A] to-[#2D0A0F] text-white">
+      <section className="relative py-32 bg-gradient-to-br from-[#38030a] via-[#38001d] to-[#1a0005] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Planos e Preços
@@ -35,22 +35,22 @@ const Planos = () => {
               >
                 {pacote.destaque && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <div className="bg-[#D4AF37] text-[#2D0A0F] text-sm font-bold px-6 py-2 rounded-full">
+                    <div className="bg-[#D4AF37] text-[#1a0005] text-sm font-bold px-6 py-2 rounded-full">
                       MAIS POPULAR
                     </div>
                   </div>
                 )}
 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-[#2D0A0F] mb-2">{pacote.nome}</h3>
-                  <div className="text-5xl font-bold text-[#800020] mb-3">{pacote.preco}</div>
+                  <h3 className="text-2xl font-bold text-[#1a0005] mb-2">{pacote.nome}</h3>
+                  <div className="text-5xl font-bold text-[#38030a] mb-3">{pacote.preco}</div>
                   <p className="text-gray-600">{pacote.descricao}</p>
                 </div>
 
                 <ul className="space-y-4 mb-8">
                   {pacote.recursos.map((recurso, idx) => (
                     <li key={idx} className="flex items-start space-x-3">
-                      <Check className="w-6 h-6 text-[#800020] flex-shrink-0 mt-0.5" />
+                      <Check className="w-6 h-6 text-[#38030a] flex-shrink-0 mt-0.5" />
                       <span className="text-gray-700">{recurso}</span>
                     </li>
                   ))}
@@ -60,8 +60,8 @@ const Planos = () => {
                   <Button
                     className={`w-full ${
                       pacote.destaque
-                        ? 'bg-[#D4AF37] hover:bg-[#B8941F] text-[#2D0A0F]'
-                        : 'bg-[#800020] hover:bg-[#6B0F1A] text-white'
+                        ? 'bg-[#D4AF37] hover:bg-[#B8941F] text-[#1a0005]'
+                        : 'bg-[#38030a] hover:bg-[#38001d] text-white'
                     }`}
                     size="lg"
                   >
@@ -88,7 +88,7 @@ const Planos = () => {
       {/* FAQ or Additional Info */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-[#2D0A0F] mb-12">
+          <h2 className="text-3xl font-bold text-center text-[#1a0005] mb-12">
             Dúvidas Frequentes
           </h2>
           <div className="space-y-6">
@@ -111,7 +111,7 @@ const Planos = () => {
               }
             ].map((item, index) => (
               <Card key={index} className="p-6">
-                <h4 className="font-bold text-lg text-[#2D0A0F] mb-2">{item.pergunta}</h4>
+                <h4 className="font-bold text-lg text-[#1a0005] mb-2">{item.pergunta}</h4>
                 <p className="text-gray-600">{item.resposta}</p>
               </Card>
             ))}
@@ -120,7 +120,7 @@ const Planos = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-br from-[#800020] via-[#6B0F1A] to-[#2D0A0F] text-white">
+      <section className="py-20 bg-gradient-to-br from-[#38030a] via-[#38001d] to-[#1a0005] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Ainda tem dúvidas?
@@ -129,7 +129,7 @@ const Planos = () => {
             Entre em contato conosco e teremos prazer em ajudar
           </p>
           <Link to="/contato">
-            <Button size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#2D0A0F] font-semibold text-lg px-10 py-6">
+            <Button size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#1a0005] font-semibold text-lg px-10 py-6">
               Falar Conosco
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

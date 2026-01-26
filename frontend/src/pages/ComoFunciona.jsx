@@ -9,7 +9,7 @@ const ComoFunciona = () => {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-[#800020] via-[#6B0F1A] to-[#2D0A0F] text-white">
+      <section className="relative py-32 bg-gradient-to-br from-[#38030a] via-[#38001d] to-[#1a0005] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Como Funciona
@@ -28,14 +28,14 @@ const ComoFunciona = () => {
               <div key={index} className="flex flex-col lg:flex-row gap-12 items-center">
                 {/* Number */}
                 <div className="flex-shrink-0">
-                  <div className="w-32 h-32 bg-gradient-to-br from-[#800020] to-[#6B0F1A] rounded-full flex items-center justify-center">
+                  <div className="w-32 h-32 bg-gradient-to-br from-[#38030a] to-[#38001d] rounded-full flex items-center justify-center">
                     <span className="text-5xl font-bold text-white">{step.numero}</span>
                   </div>
                 </div>
 
                 {/* Content */}
                 <Card className="flex-1 p-8 hover:shadow-xl transition-shadow">
-                  <h3 className="text-3xl font-bold text-[#2D0A0F] mb-4">{step.titulo}</h3>
+                  <h3 className="text-3xl font-bold text-[#1a0005] mb-4">{step.titulo}</h3>
                   <p className="text-lg text-gray-600">{step.descricao}</p>
                 </Card>
               </div>
@@ -48,7 +48,7 @@ const ComoFunciona = () => {
       <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#2D0A0F] mb-4">
+            <h2 className="text-4xl font-bold text-[#1a0005] mb-4">
               O Que Esperar
             </h2>
             <p className="text-xl text-gray-600">
@@ -80,10 +80,10 @@ const ComoFunciona = () => {
               }
             ].map((item, index) => (
               <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#800020] to-[#6B0F1A] rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#38030a] to-[#38001d] rounded-xl flex items-center justify-center mx-auto mb-4">
                   <item.icon className="w-8 h-8 text-white" />
                 </div>
-                <h4 className="text-xl font-bold text-[#2D0A0F] mb-2">{item.titulo}</h4>
+                <h4 className="text-xl font-bold text-[#1a0005] mb-2">{item.titulo}</h4>
                 <p className="text-gray-600">{item.descricao}</p>
               </Card>
             ))}
@@ -92,7 +92,7 @@ const ComoFunciona = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-br from-[#800020] via-[#6B0F1A] to-[#2D0A0F] text-white">
+      <section className="py-20 bg-gradient-to-br from-[#38030a] via-[#38001d] to-[#1a0005] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Pronto para começar?
@@ -101,7 +101,7 @@ const ComoFunciona = () => {
             Agende seu ensaio e veja a diferença que fotos profissionais fazem
           </p>
           <Link to="/novo-agendamento">
-            <Button size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#2D0A0F] font-semibold text-lg px-10 py-6">
+            <Button size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#1a0005] font-semibold text-lg px-10 py-6">
               Agendar Ensaio
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

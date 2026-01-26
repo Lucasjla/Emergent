@@ -11,7 +11,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#800020]/95 via-[#6B0F1A]/90 to-[#2D0A0F]/95 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#38030a]/95 via-[#38001d]/90 to-[#1a0005]/95 z-10" />
           <img
             src="https://images.unsplash.com/photo-1599696848652-f0ff23bc911f"
             alt="Luxury Interior"
@@ -28,13 +28,13 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/novo-agendamento">
-              <Button size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#2D0A0F] font-semibold text-lg px-8 py-6">
+              <Button size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#1a0005] font-semibold text-lg px-8 py-6">
                 Agendar Ensaio
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
             <Link to="/portfolio">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#800020] text-lg px-8 py-6">
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#38030a] text-lg px-8 py-6">
                 Ver Portfólio
               </Button>
             </Link>
@@ -53,8 +53,8 @@ const Home = () => {
               { icon: Star, value: '5.0', label: 'Avaliação Média' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <stat.icon className="w-12 h-12 mx-auto mb-4 text-[#800020]" />
-                <div className="text-4xl font-bold text-[#800020] mb-2">{stat.value}</div>
+                <stat.icon className="w-12 h-12 mx-auto mb-4 text-[#38030a]" />
+                <div className="text-4xl font-bold text-[#38030a] mb-2">{stat.value}</div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
             ))}
@@ -66,7 +66,7 @@ const Home = () => {
       <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#2D0A0F] mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a0005] mb-4">
               Nossos Serviços
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -77,16 +77,16 @@ const Home = () => {
             {servicos.slice(0, 3).map((servico) => {
               const IconComponent = servico.icone === 'Camera' ? Camera : servico.icone === 'Video' ? Video : Plane;
               return (
-                <Card key={servico.id} className="p-8 hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-[#800020]">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#800020] to-[#6B0F1A] rounded-2xl flex items-center justify-center mb-6">
+                <Card key={servico.id} className="p-8 hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-[#38030a]">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#38030a] to-[#38001d] rounded-2xl flex items-center justify-center mb-6">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#2D0A0F] mb-3">{servico.nome}</h3>
+                  <h3 className="text-2xl font-bold text-[#1a0005] mb-3">{servico.nome}</h3>
                   <p className="text-gray-600 mb-6">{servico.descricao}</p>
                   <ul className="space-y-2">
                     {servico.detalhes.slice(0, 3).map((detalhe, idx) => (
                       <li key={idx} className="flex items-start space-x-2">
-                        <CheckCircle2 className="w-5 h-5 text-[#800020] flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-5 h-5 text-[#38030a] flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-gray-700">{detalhe}</span>
                       </li>
                     ))}
@@ -97,7 +97,7 @@ const Home = () => {
           </div>
           <div className="text-center mt-12">
             <Link to="/servicos">
-              <Button size="lg" className="bg-[#800020] hover:bg-[#6B0F1A] text-white">
+              <Button size="lg" className="bg-[#38030a] hover:bg-[#38001d] text-white">
                 Ver Todos os Serviços
               </Button>
             </Link>
@@ -109,7 +109,7 @@ const Home = () => {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#2D0A0F] mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a0005] mb-4">
               Nosso Trabalho
             </h2>
             <p className="text-xl text-gray-600">
@@ -125,7 +125,7 @@ const Home = () => {
           </div>
           <div className="text-center mt-12">
             <Link to="/portfolio">
-              <Button size="lg" variant="outline" className="border-2 border-[#800020] text-[#800020] hover:bg-[#800020] hover:text-white">
+              <Button size="lg" variant="outline" className="border-2 border-[#38030a] text-[#38030a] hover:bg-[#38030a] hover:text-white">
                 Ver Portfólio Completo
               </Button>
             </Link>
@@ -137,7 +137,7 @@ const Home = () => {
       <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#2D0A0F] mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a0005] mb-4">
               O Que Dizem Nossos Clientes
             </h2>
           </div>
@@ -151,11 +151,11 @@ const Home = () => {
                 </div>
                 <p className="text-gray-700 mb-6 italic">"{depoimento.texto}"</p>
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-[#800020] rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 bg-[#38030a] rounded-full flex items-center justify-center text-white font-bold">
                     {depoimento.avatar}
                   </div>
                   <div>
-                    <div className="font-semibold text-[#2D0A0F]">{depoimento.nome}</div>
+                    <div className="font-semibold text-[#1a0005]">{depoimento.nome}</div>
                     <div className="text-sm text-gray-500">{depoimento.cargo}</div>
                   </div>
                 </div>
@@ -166,7 +166,7 @@ const Home = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-gradient-to-br from-[#800020] via-[#6B0F1A] to-[#2D0A0F] text-white">
+      <section className="py-24 bg-gradient-to-br from-[#38030a] via-[#38001d] to-[#1a0005] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Pronto Para Valorizar Seu Imóvel?
@@ -175,7 +175,7 @@ const Home = () => {
             Agende agora seu ensaio fotográfico e destaque-se no mercado imobiliário
           </p>
           <Link to="/novo-agendamento">
-            <Button size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#2D0A0F] font-semibold text-lg px-10 py-6">
+            <Button size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#1a0005] font-semibold text-lg px-10 py-6">
               Agendar Agora
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

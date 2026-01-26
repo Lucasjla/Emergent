@@ -8,7 +8,7 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-[#800020] via-[#6B0F1A] to-[#2D0A0F] text-white">
+      <section className="relative py-32 bg-gradient-to-br from-[#38030a] via-[#38001d] to-[#1a0005] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Nosso Portfólio
@@ -34,7 +34,7 @@ const Portfolio = () => {
                   alt={`Portfolio ${index + 1}`}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-[#800020]/0 group-hover:bg-[#800020]/40 transition-all duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-[#38030a]/0 group-hover:bg-[#38030a]/40 transition-all duration-300 flex items-center justify-center">
                   <span className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
                     Ver em tamanho completo
                   </span>
