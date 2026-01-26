@@ -101,7 +101,7 @@ const ComoFunciona = () => {
             Agende seu ensaio e veja a diferença que fotos profissionais fazem
           </p>
           <Link to="/novo-agendamento">
-            <Button size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#1a0005] font-semibold text-lg px-10 py-6">
+            <Button size="lg" className="bg-[#000000] hover:bg-[#1a0005] text-[#1a0005] font-semibold text-lg px-10 py-6">
               Agendar Ensaio
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

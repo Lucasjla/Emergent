@@ -21,14 +21,14 @@ const Home = () => {
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Fotografia que <br />
-            <span className="text-[#D4AF37]">Valoriza Seu Imóvel</span>
+            <span className="text-[#000000]">Valoriza Seu Imóvel</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto">
             Transforme propriedades em obras de arte visual. Fotografia, vídeo e drone profissionais para o mercado imobiliário.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/novo-agendamento">
-              <Button size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#1a0005] font-semibold text-lg px-8 py-6">
+              <Button size="lg" className="bg-[#000000] hover:bg-[#1a0005] text-[#1a0005] font-semibold text-lg px-8 py-6">
                 Agendar Ensaio
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -146,7 +146,7 @@ const Home = () => {
               <Card key={depoimento.id} className="p-8">
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-[#D4AF37] text-[#D4AF37]" />
+                    <Star key={i} className="w-5 h-5 fill-[#000000] text-[#000000]" />
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 italic">"{depoimento.texto}"</p>
@@ -175,7 +175,7 @@ const Home = () => {
             Agende agora seu ensaio fotográfico e destaque-se no mercado imobiliário
           </p>
           <Link to="/novo-agendamento">
-            <Button size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#1a0005] font-semibold text-lg px-10 py-6">
+            <Button size="lg" className="bg-[#000000] hover:bg-[#1a0005] text-[#1a0005] font-semibold text-lg px-10 py-6">
               Agendar Agora
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

@@ -4,6 +4,6 @@ export const COLORS = {
   secondary: '#38001d',
   dark: '#1a0005',
   light: '#F5E6E8',
-  gold: '#D4AF37',
-  goldHover: '#B8941F'
+  gold: '#000000',
+  goldHover: '#1a0005'
 };

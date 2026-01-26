@@ -9,15 +9,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo e Descrição */}
           <div className="col-span-1">
-            <h3 className="text-2xl font-bold text-[#D4AF37] mb-4">ARKANO</h3>
+            <h3 className="text-2xl font-bold text-[#000000] mb-4">ARKANO</h3>
             <p className="text-gray-300 text-sm">
               Fotografia imobiliária premium que valoriza seu imóvel e acelera suas vendas.
             </p>
             <div className="flex space-x-4 mt-6">
-              <a href="#" className="hover:text-[#D4AF37] transition-colors">
+              <a href="#" className="hover:text-[#000000] transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="hover:text-[#D4AF37] transition-colors">
+              <a href="#" className="hover:text-[#000000] transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
             </div>
@@ -28,22 +28,22 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Links Rápidos</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-[#D4AF37] transition-colors">
+                <Link to="/" className="text-gray-300 hover:text-[#000000] transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/servicos" className="text-gray-300 hover:text-[#D4AF37] transition-colors">
+                <Link to="/servicos" className="text-gray-300 hover:text-[#000000] transition-colors">
                   Serviços
                 </Link>
               </li>
               <li>
-                <Link to="/portfolio" className="text-gray-300 hover:text-[#D4AF37] transition-colors">
+                <Link to="/portfolio" className="text-gray-300 hover:text-[#000000] transition-colors">
                   Portfólio
                 </Link>
               </li>
               <li>
-                <Link to="/planos" className="text-gray-300 hover:text-[#D4AF37] transition-colors">
+                <Link to="/planos" className="text-gray-300 hover:text-[#000000] transition-colors">
                   Planos
                 </Link>
               </li>
@@ -67,15 +67,15 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Contato</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-2">
-                <Phone className="w-4 h-4 mt-0.5 text-[#D4AF37]" />
+                <Phone className="w-4 h-4 mt-0.5 text-[#000000]" />
                 <span className="text-gray-300">(11) 99999-9999</span>
               </li>
               <li className="flex items-start space-x-2">
-                <Mail className="w-4 h-4 mt-0.5 text-[#D4AF37]" />
+                <Mail className="w-4 h-4 mt-0.5 text-[#000000]" />
                 <span className="text-gray-300">contato@arkano.com.br</span>
               </li>
               <li className="flex items-start space-x-2">
-                <MapPin className="w-4 h-4 mt-0.5 text-[#D4AF37]" />
+                <MapPin className="w-4 h-4 mt-0.5 text-[#000000]" />
                 <span className="text-gray-300">São Paulo, SP</span>
               </li>
             </ul>

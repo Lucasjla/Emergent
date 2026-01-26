@@ -29,13 +29,13 @@ const Planos = () => {
                 key={pacote.id}
                 className={`relative p-8 hover:shadow-2xl transition-all duration-300 ${
                   pacote.destaque
-                    ? 'border-4 border-[#D4AF37] transform md:scale-105'
+                    ? 'border-4 border-[#000000] transform md:scale-105'
                     : 'border-2 border-gray-200'
                 }`}
               >
                 {pacote.destaque && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <div className="bg-[#D4AF37] text-[#1a0005] text-sm font-bold px-6 py-2 rounded-full">
+                    <div className="bg-[#000000] text-[#1a0005] text-sm font-bold px-6 py-2 rounded-full">
                       MAIS POPULAR
                     </div>
                   </div>
@@ -60,7 +60,7 @@ const Planos = () => {
                   <Button
                     className={`w-full ${
                       pacote.destaque
-                        ? 'bg-[#D4AF37] hover:bg-[#B8941F] text-[#1a0005]'
+                        ? 'bg-[#000000] hover:bg-[#1a0005] text-[#1a0005]'
                         : 'bg-[#38030a] hover:bg-[#38001d] text-white'
                     }`}
                     size="lg"
@@ -129,7 +129,7 @@ const Planos = () => {
             Entre em contato conosco e teremos prazer em ajudar
           </p>
           <Link to="/contato">
-            <Button size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#1a0005] font-semibold text-lg px-10 py-6">
+            <Button size="lg" className="bg-[#000000] hover:bg-[#1a0005] text-[#1a0005] font-semibold text-lg px-10 py-6">
               Falar Conosco
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

@@ -189,10 +189,10 @@ const NovoAgendamento = () => {
                 formData.pacoteSelecionado === pacote.id
                   ? 'border-2 border-[#38030a] bg-[#F5E6E8]'
                   : 'border-2 border-gray-200 hover:border-[#38030a]'
-              } ${pacote.destaque ? 'ring-2 ring-[#D4AF37]' : ''}`}
+              } ${pacote.destaque ? 'ring-2 ring-[#000000]' : ''}`}
             >
               {pacote.destaque && (
-                <div className="bg-[#D4AF37] text-[#1a0005] text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">
+                <div className="bg-[#000000] text-[#1a0005] text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">
                   MAIS POPULAR
                 </div>
               )}
@@ -604,7 +604,7 @@ const NovoAgendamento = () => {
           ) : (
             <Button
               onClick={finalizarAgendamento}
-              className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#1a0005] font-semibold"
+              className="bg-[#000000] hover:bg-[#1a0005] text-[#1a0005] font-semibold"
             >
               Confirmar Agendamento
               <Check className="w-4 h-4 ml-2" />
