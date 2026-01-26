@@ -175,7 +175,7 @@ const Home = () => {
             Agende agora seu ensaio fotográfico e destaque-se no mercado imobiliário
           </p>
           <Link to="/novo-agendamento">
-            <Button size="lg" className="bg-[#000000] hover:bg-[#1a0005] text-[#1a0005] font-semibold text-lg px-10 py-6">
+            <Button size="lg" className="bg-white hover:bg-gray-100 text-[#38030a] font-semibold text-lg px-10 py-6 shadow-lg">
               Agendar Agora
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
