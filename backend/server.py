@@ -185,6 +185,21 @@ async def get_pedido(
     
     return Pedido(**pedido_data)
 
+# ==================== PUBLIC ROUTES ====================
+
+@api_router.get("/pedidos/publico/{pedido_id}", response_model=Pedido)
+async def get_pedido_publico(pedido_id: str):
+    """Get pedido publicly - for sharing gallery with clients (no auth required)"""
+    pedido_data = await db.pedidos.find_one({"id": pedido_id})
+    if not pedido_data:
+        raise HTTPException(status_code=404, detail="Pedido não encontrado")
+    
+    # Only return if status is 'entregue' (delivered)
+    if pedido_data.get('status') != 'entregue':
+        raise HTTPException(status_code=404, detail="Galeria ainda não disponível")
+    
+    return Pedido(**pedido_data)
+
 # ==================== ADMIN ROUTES (for demo purposes) ====================
 
 @api_router.put("/admin/pedidos/{pedido_id}/status")
