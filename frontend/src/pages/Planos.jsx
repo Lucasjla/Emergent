@@ -60,7 +60,7 @@ const Planos = () => {
                   <Button
                     className={`w-full ${
                       pacote.destaque
-                        ? 'bg-[#000000] hover:bg-[#1a0005] text-[#1a0005]'
+                        ? 'bg-white hover:bg-gray-100 text-[#38030a] shadow-lg'
                         : 'bg-[#38030a] hover:bg-[#38001d] text-white'
                     }`}
                     size="lg"
@@ -129,7 +129,7 @@ const Planos = () => {
             Entre em contato conosco e teremos prazer em ajudar
           </p>
           <Link to="/contato">
-            <Button size="lg" className="bg-[#000000] hover:bg-[#1a0005] text-[#1a0005] font-semibold text-lg px-10 py-6">
+            <Button size="lg" className="bg-white hover:bg-gray-100 text-[#38030a] shadow-lg font-semibold text-lg px-10 py-6">
               Falar Conosco
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

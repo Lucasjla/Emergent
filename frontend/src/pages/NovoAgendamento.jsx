@@ -604,7 +604,7 @@ const NovoAgendamento = () => {
           ) : (
             <Button
               onClick={finalizarAgendamento}
-              className="bg-[#000000] hover:bg-[#1a0005] text-[#1a0005] font-semibold"
+              className="bg-white hover:bg-gray-100 text-[#38030a] shadow-lg font-semibold"
             >
               Confirmar Agendamento
               <Check className="w-4 h-4 ml-2" />
