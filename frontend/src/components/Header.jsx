@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Calendar } from 'lucide-react';
+import { Menu, X, Calendar, User as UserIcon, LogOut } from 'lucide-react';
 import { Button } from './ui/button';
+import { useAuth } from '../context/AuthContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { isAuthenticated, user, logout } = useAuth();
 
   const navLinks = [
     { to: '/', label: 'Home' },
@@ -44,14 +46,39 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/novo-agendamento">
-              <Button className="bg-[#38030a] hover:bg-[#38001d] text-white">
-                <Calendar className="w-4 h-4 mr-2" />
-                Agendar Ensaio
-              </Button>
-            </Link>
+            {isAuthenticated ? (
+              <>
+                <Link to="/area-cliente">
+                  <Button variant="outline" className="border-[#38030a] text-[#38030a] hover:bg-[#38030a] hover:text-white">
+                    <UserIcon className="w-4 h-4 mr-2" />
+                    Minha Área
+                  </Button>
+                </Link>
+                <Link to="/novo-agendamento">
+                  <Button className="bg-[#38030a] hover:bg-[#38001d] text-white">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    Agendar Ensaio
+                  </Button>
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/login">
+                  <Button variant="outline" className="border-[#38030a] text-[#38030a] hover:bg-[#38030a] hover:text-white">
+                    <UserIcon className="w-4 h-4 mr-2" />
+                    Entrar
+                  </Button>
+                </Link>
+                <Link to="/novo-agendamento">
+                  <Button className="bg-[#38030a] hover:bg-[#38001d] text-white">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    Agendar Ensaio
+                  </Button>
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -80,12 +107,38 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <Link to="/novo-agendamento" onClick={() => setIsMenuOpen(false)}>
-              <Button className="w-full bg-[#38030a] hover:bg-[#38001d] text-white">
-                <Calendar className="w-4 h-4 mr-2" />
-                Agendar Ensaio
-              </Button>
-            </Link>
+            
+            {isAuthenticated ? (
+              <>
+                <Link to="/area-cliente" onClick={() => setIsMenuOpen(false)}>
+                  <Button className="w-full bg-[#38001d] hover:bg-[#38030a] text-white mb-2">
+                    <UserIcon className="w-4 h-4 mr-2" />
+                    Minha Área
+                  </Button>
+                </Link>
+                <Link to="/novo-agendamento" onClick={() => setIsMenuOpen(false)}>
+                  <Button className="w-full bg-[#38030a] hover:bg-[#38001d] text-white">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    Agendar Ensaio
+                  </Button>
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/login" onClick={() => setIsMenuOpen(false)}>
+                  <Button className="w-full bg-[#38001d] hover:bg-[#38030a] text-white mb-2">
+                    <UserIcon className="w-4 h-4 mr-2" />
+                    Entrar
+                  </Button>
+                </Link>
+                <Link to="/novo-agendamento" onClick={() => setIsMenuOpen(false)}>
+                  <Button className="w-full bg-[#38030a] hover:bg-[#38001d] text-white">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    Agendar Ensaio
+                  </Button>
+                </Link>
+              </>
+            )}
           </nav>
         </div>
       )}
