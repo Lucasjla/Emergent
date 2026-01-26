@@ -192,7 +192,7 @@ const NovoAgendamento = () => {
               } ${pacote.destaque ? 'ring-2 ring-[#000000]' : ''}`}
             >
               {pacote.destaque && (
-                <div className="bg-[#000000] text-[#1a0005] text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">
+                <div className="bg-[#38030a] text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">
                   MAIS POPULAR
                 </div>
               )}

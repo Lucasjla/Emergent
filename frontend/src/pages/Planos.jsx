@@ -35,7 +35,7 @@ const Planos = () => {
               >
                 {pacote.destaque && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <div className="bg-[#000000] text-[#1a0005] text-sm font-bold px-6 py-2 rounded-full">
+                    <div className="bg-[#38030a] text-white text-sm font-bold px-6 py-2 rounded-full">
                       MAIS POPULAR
                     </div>
                   </div>
