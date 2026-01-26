@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
-import { Camera, Video, Plane, Star, ArrowRight, CheckCircle2, TrendingUp, Clock, Award } from 'lucide-react';
-import { servicos, depoimentos, portfolioImages } from '../mock/data';
+import { Camera, Video, Plane, ArrowRight, CheckCircle2, TrendingUp, Clock, Award } from 'lucide-react';
+import { servicos, portfolioImages } from '../mock/data';
 
 const Home = () => {
   return (
