@@ -247,17 +247,33 @@ const AreaCliente = () => {
 
                       <div className="mt-4 md:mt-0 md:ml-6 flex flex-col items-end space-y-2">
                         {pedido.status === 'entregue' && pedido.arquivos_entregues?.length > 0 && (
-                          <Button
-                            size="sm"
-                            className="bg-green-600 hover:bg-green-700 text-white"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              setSelectedPedido(pedido.id);
-                            }}
-                          >
-                            <Download className="w-4 h-4 mr-2" />
-                            Ver Arquivos
-                          </Button>
+                          <>
+                            <Button
+                              size="sm"
+                              className="bg-green-600 hover:bg-green-700 text-white"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setSelectedPedido(pedido.id);
+                              }}
+                            >
+                              <Download className="w-4 h-4 mr-2" />
+                              Ver Arquivos
+                            </Button>
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className="border-[#38030a] text-[#38030a] hover:bg-[#38030a] hover:text-white"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                const link = `${window.location.origin}/galeria/${pedido.id}`;
+                                navigator.clipboard.writeText(link);
+                                toast.success('Link copiado para área de transferência!');
+                              }}
+                            >
+                              <ExternalLink className="w-4 h-4 mr-2" />
+                              Copiar Link da Galeria
+                            </Button>
+                          </>
                         )}
                         {pedido.link_site_imovel && (
                           <Button
