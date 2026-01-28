@@ -88,6 +88,113 @@ const Servicos = () => {
         </div>
       </section>
 
+      {/* Home Staging Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 bg-[#38030a] text-white px-4 py-2 rounded-full mb-4">
+              <Sparkles className="w-5 h-5" />
+              <span className="font-semibold">NOVO SERVIÇO</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a0005] mb-4">
+              Valorização Visual do Imóvel
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transforme ambientes vazios em espaços mobiliados virtualmente com Home Staging Digital
+            </p>
+          </div>
+
+          {/* Slider Antes/Depois */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            {/* Exemplo 1 */}
+            <Card className="overflow-hidden hover:shadow-2xl transition-shadow">
+              <div className="relative">
+                <div className="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
+                  ANTES
+                </div>
+                <img
+                  src="https://images.unsplash.com/photo-1484154218962-a197022b5858"
+                  alt="Sala vazia antes"
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              <div className="relative">
+                <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
+                  DEPOIS
+                </div>
+                <img
+                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7"
+                  alt="Sala mobiliada depois"
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h4 className="font-bold text-lg text-[#1a0005] mb-2">Sala de Estar</h4>
+                <p className="text-gray-600 text-sm">
+                  Ambiente transformado com mobília virtual moderna e aconchegante
+                </p>
+              </div>
+            </Card>
+
+            {/* Exemplo 2 */}
+            <Card className="overflow-hidden hover:shadow-2xl transition-shadow">
+              <div className="relative">
+                <div className="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
+                  ANTES
+                </div>
+                <img
+                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136"
+                  alt="Quarto vazio antes"
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              <div className="relative">
+                <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
+                  DEPOIS
+                </div>
+                <img
+                  src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
+                  alt="Quarto mobiliado depois"
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h4 className="font-bold text-lg text-[#1a0005] mb-2">Quarto Principal</h4>
+                <p className="text-gray-600 text-sm">
+                  Espaço acolhedor e sofisticado que atrai compradores
+                </p>
+              </div>
+            </Card>
+          </div>
+
+          {/* Benefícios */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                titulo: 'Valorização Imediata',
+                descricao: 'Imóveis com Home Staging vendem até 73% mais rápido'
+              },
+              {
+                titulo: 'Custo-Benefício',
+                descricao: 'Muito mais econômico que mobiliar fisicamente'
+              },
+              {
+                titulo: 'Versatilidade',
+                descricao: 'Diferentes estilos para públicos diversos'
+              }
+            ].map((item, index) => (
+              <Card key={index} className="p-6 text-center border-2 border-[#38030a]/10">
+                <div className="w-12 h-12 bg-[#38030a] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Sparkles className="w-6 h-6 text-white" />
+                </div>
+                <h4 className="font-bold text-lg text-[#1a0005] mb-2">{item.titulo}</h4>
+                <p className="text-gray-600">{item.descricao}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
