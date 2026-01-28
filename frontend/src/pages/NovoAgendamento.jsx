@@ -76,7 +76,8 @@ const NovoAgendamento = () => {
     'Plane': Plane,
     'ScanEye': ScanEye,
     'Layout': Layout,
-    'User': User
+    'User': User,
+    'Sparkles': Sparkles
   };
 
   const handleServicoAdicionalToggle = (servicoId) => {
