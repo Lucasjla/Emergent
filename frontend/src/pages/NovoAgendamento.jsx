@@ -305,9 +305,6 @@ const NovoAgendamento = () => {
           </div>
         </div>
       )}
-          </div>
-        </div>
-      )}
     </div>
   );
 
