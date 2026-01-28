@@ -145,6 +145,7 @@ const NovoAgendamento = () => {
       const pedidoData = {
         pacote_selecionado: formData.pacoteSelecionado,
         servicos_adicionais: formData.servicosAdicionais,
+        ambientes_home_staging: formData.ambientesHomeStaging,
         tipo_imovel: formData.tipoImovel,
         endereco: formData.endereco,
         complemento: formData.complemento,
