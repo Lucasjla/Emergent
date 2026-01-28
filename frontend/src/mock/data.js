@@ -42,6 +42,14 @@ export const servicos = [
     descricao: 'Fotos profissionais da equipe e corretores',
     icone: 'User',
     detalhes: ['Fotos corporativas', 'Vários looks', 'Edição profissional', 'Uso comercial']
+  },
+  {
+    id: 7,
+    nome: 'Valorização Visual do Imóvel',
+    descricao: 'Home Staging Digital - Transforme ambientes vazios em espaços mobiliados virtualmente',
+    icone: 'Sparkles',
+    detalhes: ['Mobília virtual realista', 'Diversos estilos', 'Antes e depois', 'Valorização imediata'],
+    ambientes: ['Sala de Estar', 'Quarto', 'Cozinha', 'Escritório', 'Sala de Jantar', 'Varanda']
   }
 ];
 
