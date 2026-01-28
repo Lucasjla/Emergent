@@ -25,6 +25,7 @@ const NovoAgendamento = () => {
     // Etapa 1: Serviços
     pacoteSelecionado: '',
     servicosAdicionais: [],
+    ambientesHomeStaging: [],
     
     // Etapa 2: Informações do Imóvel
     tipoImovel: '',
