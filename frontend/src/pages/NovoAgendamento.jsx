@@ -8,7 +8,7 @@ import { Label } from '../components/ui/label';
 import { Textarea } from '../components/ui/textarea';
 import { Checkbox } from '../components/ui/checkbox';
 import { Calendar } from '../components/ui/calendar';
-import { Camera, Video, Plane, ScanEye, Layout, User, ChevronRight, ChevronLeft, Check } from 'lucide-react';
+import { Camera, Video, Plane, ScanEye, Layout, User, Sparkles, ChevronRight, ChevronLeft, Check } from 'lucide-react';
 import { servicos, pacotes } from '../mock/data';
 import { toast } from 'sonner';
 import axios from 'axios';
