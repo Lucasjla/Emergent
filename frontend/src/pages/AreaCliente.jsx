@@ -218,9 +218,20 @@ const AreaCliente = () => {
                   >
                     <div className="flex flex-col md:flex-row md:items-center justify-between">
                       <div className="flex-1">
-                        <div className="flex items-center space-x-3 mb-3">
+                        <div className="flex items-center flex-wrap space-x-3 mb-3">
                           <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getStatusColor(pedido.status)}`}>
                             {getStatusLabel(pedido.status)}
+                          </span>
+                          <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                            pedido.status_pagamento === 'pago' 
+                              ? 'bg-green-100 text-green-800' 
+                              : pedido.status_pagamento === 'cancelado'
+                              ? 'bg-red-100 text-red-800'
+                              : 'bg-yellow-100 text-yellow-800'
+                          }`}>
+                            {pedido.status_pagamento === 'pago' ? '✓ Pago' : 
+                             pedido.status_pagamento === 'cancelado' ? 'Pagamento Cancelado' :
+                             '⏳ Pagamento Pendente'}
                           </span>
                           <span className="text-sm text-gray-500">
                             {new Date(pedido.created_at).toLocaleDateString('pt-BR')}
@@ -242,6 +253,14 @@ const AreaCliente = () => {
                             <Package className="w-4 h-4" />
                             <span>{pedido.pacote_selecionado}</span>
                           </div>
+                          {pedido.valor_total && (
+                            <div className="flex items-center space-x-1">
+                              <DollarSign className="w-4 h-4" />
+                              <span className="font-semibold text-[#38030a]">
+                                R$ {pedido.valor_total.toFixed(2)}
+                              </span>
+                            </div>
+                          )}
                         </div>
                       </div>
 
