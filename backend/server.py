@@ -153,8 +153,15 @@ async def create_pedido(
     )
 
 @api_router.get("/pedidos", response_model=List[PedidoResponse])
-async def get_pedidos(current_user: User = Depends(get_current_user)):
-    pedidos = await db.pedidos.find({"user_id": current_user.id}).sort("created_at", -1).to_list(1000)
+async def get_pedidos(
+    current_user: User = Depends(get_current_user),
+    limit: int = 50,
+    skip: int = 0
+):
+    """Get user pedidos with pagination"""
+    pedidos = await db.pedidos.find(
+        {"user_id": current_user.id}
+    ).sort("created_at", -1).skip(skip).limit(limit).to_list(limit)
     
     return [
         PedidoResponse(
