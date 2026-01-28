@@ -265,6 +265,39 @@ async def update_link_site(
     
     return {"message": "Link atualizado com sucesso"}
 
+@api_router.put("/admin/pedidos/{pedido_id}/pagamento")
+async def update_pagamento(
+    pedido_id: str,
+    status_pagamento: str,
+    valor_total: Optional[float] = None,
+    forma_pagamento: Optional[str] = None
+):
+    """Update payment status - In production, this should require admin auth"""
+    pedido_data = await db.pedidos.find_one({"id": pedido_id})
+    if not pedido_data:
+        raise HTTPException(status_code=404, detail="Pedido não encontrado")
+    
+    update_data = {
+        "status_pagamento": status_pagamento,
+        "updated_at": datetime.utcnow()
+    }
+    
+    if status_pagamento == 'pago':
+        update_data["data_pagamento"] = datetime.utcnow()
+    
+    if valor_total is not None:
+        update_data["valor_total"] = valor_total
+    
+    if forma_pagamento:
+        update_data["forma_pagamento"] = forma_pagamento
+    
+    await db.pedidos.update_one(
+        {"id": pedido_id},
+        {"$set": update_data}
+    )
+    
+    return {"message": "Pagamento atualizado com sucesso"}
+
 # Include the router in the main app
 app.include_router(api_router)
 
