@@ -57,8 +57,8 @@ const Footer = () => {
               <li>Fotografia Profissional</li>
               <li>Vídeo Promocional</li>
               <li>Drone</li>
-              <li>Tour Virtual 360°</li>
-              <li>Planta Humanizada</li>
+              <li>Ensaio Retrato</li>
+              <li>Home Staging Digital</li>
             </ul>
           </div>
 
