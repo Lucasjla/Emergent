@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card } from '../components/ui/card';
 import { Button } from '../components/ui/button';
-import { Camera, Video, Plane, ScanEye, Layout, User, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Camera, Video, Plane, ScanEye, Layout, User, Sparkles, CheckCircle2, ArrowRight } from 'lucide-react';
 import { servicos } from '../mock/data';
 
 const Servicos = () => {
@@ -12,7 +12,8 @@ const Servicos = () => {
     'Plane': Plane,
     'ScanEye': ScanEye,
     'Layout': Layout,
-    'User': User
+    'User': User,
+    'Sparkles': Sparkles
   };
 
   const servicoImages = [
@@ -21,7 +22,8 @@ const Servicos = () => {
     'https://images.unsplash.com/photo-1591379053117-53dd267abb19',
     'https://images.unsplash.com/photo-1581784878214-8d5596b98a01',
     'https://images.unsplash.com/photo-1621293954908-907159247fc8',
-    'https://images.unsplash.com/photo-1618661148759-0d481c0c2116'
+    'https://images.unsplash.com/photo-1618661148759-0d481c0c2116',
+    'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace'
   ];
 
   return (
