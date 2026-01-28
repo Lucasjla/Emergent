@@ -220,19 +220,24 @@ const NovoAgendamento = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {servicos.map((servico) => {
             const IconComponent = iconMap[servico.icone];
+            const isSelected = formData.servicosAdicionais.includes(servico.id);
             return (
               <Card
                 key={servico.id}
                 className={`p-4 cursor-pointer transition-all duration-300 ${
-                  formData.servicosAdicionais.includes(servico.id)
+                  isSelected
                     ? 'border-2 border-[#38030a] bg-[#F5E6E8]'
                     : 'border border-gray-200 hover:border-[#38030a]'
                 }`}
-                onClick={() => handleServicoAdicionalToggle(servico.id)}
+                onClick={(e) => {
+                  // Previne duplo toggle se clicar diretamente no checkbox
+                  if (e.target.closest('button')) return;
+                  handleServicoAdicionalToggle(servico.id);
+                }}
               >
                 <div className="flex items-start space-x-3">
                   <Checkbox
-                    checked={formData.servicosAdicionais.includes(servico.id)}
+                    checked={isSelected}
                     onCheckedChange={() => handleServicoAdicionalToggle(servico.id)}
                   />
                   <div className="flex-1">
