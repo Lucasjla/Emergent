@@ -12,7 +12,7 @@ Atualmente ele está rodando apenas no **ambiente de desenvolvimento** da Emerge
 
 **URL de Desenvolvimento:**
 ```
-https://imoveismedia.preview.emergentagent.com
+https://realty-portfolio-7.preview.emergentagent.com
 ```
 
 ☝️ Esta URL funciona AGORA para você testar o site antes de publicar.
@@ -227,7 +227,7 @@ Antes de fazer deploy, confirme:
 
 **Se você quer testar mais:**
 
-1. Use a URL de preview: https://imoveismedia.preview.emergentagent.com
+1. Use a URL de preview: https://realty-portfolio-7.preview.emergentagent.com
 2. Teste por alguns dias
 3. Faça ajustes necessários
 4. Depois faça deploy quando estiver 100% confortável

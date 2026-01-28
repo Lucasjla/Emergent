@@ -69,7 +69,7 @@
 
 #### Frontend (`/app/frontend/.env`)
 ```env
-REACT_APP_BACKEND_URL=https://imoveismedia.preview.emergentagent.com
+REACT_APP_BACKEND_URL=https://realty-portfolio-7.preview.emergentagent.com
 WDS_SOCKET_PORT=443
 ENABLE_HEALTH_CHECK=false
 ```
