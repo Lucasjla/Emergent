@@ -323,6 +323,13 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# ==================== HEALTH CHECK (required for deployment) ====================
+
+@app.get("/health")
+async def health_check():
+    """Health check endpoint for Kubernetes/deployment probes"""
+    return {"status": "ok"}
+
 @app.on_event("shutdown")
 async def shutdown_db_client():
     client.close()
