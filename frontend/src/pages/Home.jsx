@@ -11,10 +11,12 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#38030a]/95 via-[#38001d]/90 to-[#1a0005]/95 z-10" />
+          {/* Overlay gradiente bordô para manter identidade visual */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#38030a]/85 via-[#38001d]/80 to-[#1a0005]/90 z-10" />
+          {/* Foto de fachada moderna e luxuosa */}
           <img
-            src="https://images.unsplash.com/photo-1599696848652-f0ff23bc911f"
-            alt="Luxury Interior"
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+            alt="Luxury Property"
             className="w-full h-full object-cover"
           />
         </div>
