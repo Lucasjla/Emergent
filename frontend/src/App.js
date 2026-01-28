@@ -34,6 +34,7 @@ function App() {
                 <main className="pt-20">
                   <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/preview" element={<HomePreview />} />
                     <Route path="/quem-somos" element={<QuemSomos />} />
                     <Route path="/servicos" element={<Servicos />} />
                     <Route path="/como-funciona" element={<ComoFunciona />} />
