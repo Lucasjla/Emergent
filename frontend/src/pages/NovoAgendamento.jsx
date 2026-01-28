@@ -264,31 +264,47 @@ const NovoAgendamento = () => {
             Escolha quais ambientes você deseja transformar virtualmente
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {servicos.find(s => s.id === 7)?.ambientes?.map((ambiente, idx) => (
-              <Card
-                key={idx}
-                className={`p-4 cursor-pointer transition-all ${
-                  formData.ambientesHomeStaging.includes(ambiente)
-                    ? 'border-2 border-[#38030a] bg-[#F5E6E8]'
-                    : 'border border-gray-200 hover:border-[#38030a]'
-                }`}
-                onClick={() => {
-                  setFormData(prev => ({
-                    ...prev,
-                    ambientesHomeStaging: prev.ambientesHomeStaging.includes(ambiente)
-                      ? prev.ambientesHomeStaging.filter(a => a !== ambiente)
-                      : [...prev.ambientesHomeStaging, ambiente]
-                  }));
-                }}
-              >
-                <div className="flex items-center space-x-3">
-                  <Checkbox
-                    checked={formData.ambientesHomeStaging.includes(ambiente)}
-                  />
-                  <span className="font-medium text-[#1a0005]">{ambiente}</span>
-                </div>
-              </Card>
-            ))}
+            {servicos.find(s => s.id === 7)?.ambientes?.map((ambiente, idx) => {
+              const isSelected = formData.ambientesHomeStaging.includes(ambiente);
+              return (
+                <Card
+                  key={idx}
+                  className={`p-4 cursor-pointer transition-all ${
+                    isSelected
+                      ? 'border-2 border-[#38030a] bg-[#F5E6E8]'
+                      : 'border border-gray-200 hover:border-[#38030a]'
+                  }`}
+                  onClick={(e) => {
+                    // Previne duplo toggle se clicar diretamente no checkbox
+                    if (e.target.closest('button')) return;
+                    setFormData(prev => ({
+                      ...prev,
+                      ambientesHomeStaging: prev.ambientesHomeStaging.includes(ambiente)
+                        ? prev.ambientesHomeStaging.filter(a => a !== ambiente)
+                        : [...prev.ambientesHomeStaging, ambiente]
+                    }));
+                  }}
+                >
+                  <div className="flex items-center space-x-3">
+                    <Checkbox
+                      checked={isSelected}
+                      onCheckedChange={() => {
+                        setFormData(prev => ({
+                          ...prev,
+                          ambientesHomeStaging: prev.ambientesHomeStaging.includes(ambiente)
+                            ? prev.ambientesHomeStaging.filter(a => a !== ambiente)
+                            : [...prev.ambientesHomeStaging, ambiente]
+                        }));
+                      }}
+                    />
+                    <span className="font-medium text-[#1a0005]">{ambiente}</span>
+                  </div>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      )}
           </div>
         </div>
       )}
