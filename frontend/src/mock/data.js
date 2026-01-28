@@ -23,20 +23,6 @@ export const servicos = [
     detalhes: ['Piloto certificado', 'Fotos e vídeos aéreos', 'Diferentes ângulos', 'Alta resolução']
   },
   {
-    id: 4,
-    nome: 'Tour Virtual 360°',
-    descricao: 'Experiência imersiva que permite explorar o imóvel virtualmente',
-    icone: 'ScanEye',
-    detalhes: ['Tour interativo', 'Visualização 360°', 'Hotspots informativos', 'Compatível com VR']
-  },
-  {
-    id: 5,
-    nome: 'Planta Humanizada',
-    descricao: 'Plantas baixas profissionais com móveis e decoração',
-    icone: 'Layout',
-    detalhes: ['Medidas precisas', 'Design realista', 'Alta qualidade', 'Diversos formatos']
-  },
-  {
     id: 6,
     nome: 'Ensaio Retrato',
     descricao: 'Fotos profissionais da equipe e corretores',
