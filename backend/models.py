@@ -49,6 +49,7 @@ class Pedido(BaseModel):
     # Serviços
     pacote_selecionado: str
     servicos_adicionais: List[int] = []
+    ambientes_home_staging: List[str] = []  # Para Home Staging Digital
     
     # Imóvel
     tipo_imovel: str
@@ -78,6 +79,12 @@ class Pedido(BaseModel):
     historico_status: List[PedidoStatus] = []
     arquivos_entregues: List[ArquivoEntregue] = []
     link_site_imovel: Optional[str] = None
+    
+    # Pagamento
+    status_pagamento: str = 'pendente'  # 'pendente', 'pago', 'cancelado'
+    valor_total: Optional[float] = None
+    data_pagamento: Optional[datetime] = None
+    forma_pagamento: Optional[str] = None  # 'dinheiro', 'pix', 'cartao', 'transferencia'
     
     # Metadata
     created_at: datetime = Field(default_factory=datetime.utcnow)
