@@ -330,6 +330,11 @@ async def health_check():
     """Health check endpoint for Kubernetes/deployment probes"""
     return {"status": "ok"}
 
+@api_router.get("/health")
+async def api_health_check():
+    """Health check endpoint via /api prefix"""
+    return {"status": "ok"}
+
 @app.on_event("shutdown")
 async def shutdown_db_client():
     client.close()
