@@ -93,6 +93,7 @@ class Pedido(BaseModel):
 class PedidoCreate(BaseModel):
     pacote_selecionado: str
     servicos_adicionais: List[int] = []
+    ambientes_home_staging: List[str] = []
     tipo_imovel: str
     endereco: str
     complemento: Optional[str] = None
