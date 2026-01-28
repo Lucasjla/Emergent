@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Card } from '../components/ui/card';
 import { Button } from '../components/ui/button';
-import { Package, Clock, CheckCircle2, Download, ExternalLink, Calendar, User, LogOut } from 'lucide-react';
+import { Package, Clock, CheckCircle2, Download, ExternalLink, Calendar, User, LogOut, CreditCard, DollarSign } from 'lucide-react';
 import axios from 'axios';
 import { toast } from 'sonner';
 
