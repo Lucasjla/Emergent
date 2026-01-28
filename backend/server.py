@@ -305,8 +305,21 @@ async def update_pagamento(
     
     return {"message": "Pagamento atualizado com sucesso"}
 
+# ==================== HEALTH CHECK (required for deployment) ====================
+
+@api_router.get("/health")
+async def api_health_check():
+    """Health check endpoint via /api prefix"""
+    return {"status": "ok"}
+
 # Include the router in the main app
 app.include_router(api_router)
+
+# Health check at root level (without /api prefix) for Kubernetes probes
+@app.get("/health")
+async def health_check():
+    """Health check endpoint for Kubernetes/deployment probes"""
+    return {"status": "ok"}
 
 app.add_middleware(
     CORSMiddleware,
@@ -322,17 +335,6 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
-
-# ==================== HEALTH CHECK (required for deployment) ====================
-
-@app.get("/health")
-async def health_check():
-    """Health check endpoint for Kubernetes/deployment probes"""
-    return {"status": "ok"}
-
-@api_router.get("/health")
-async def api_health_check():
-    """Health check endpoint via /api prefix"""
     return {"status": "ok"}
 
 @app.on_event("shutdown")
